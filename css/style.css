@@ -12,8 +12,7 @@ body {
     position: relative;
   }
   
-  body,
-  html {
+  body, html {
     overflow: hidden;
     height: 100%;
     width: 100%;
