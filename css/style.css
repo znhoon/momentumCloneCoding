@@ -1,155 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-
-body {
-    font-family: 'Roboto Mono', monospace;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0px;
-    position: relative;
-}
-
-body, html {
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0; }
-  
-img {
-    font-weight: bold;
-    object-fit: cover;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-  
-input {
-    background: none;
-    appearance: none;
-    border: 0;
-    color: white;
-    border-bottom: 2px solid white;
-}
-  
-input::placeholder {
-    color: white;
-  }
-  input:focus {
-    outline: none;
-  }
-  
 .hidden {
-    display: none;
+  display: none;
 }
-  
-#info-div {
-    display: grid;
-    grid-template-columns: auto;
-    row-gap: 10px;
-    grid-template-areas:
-      "clock"
-      "name"
-      "todo";
-    place-items: center center;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
+
+body{
+  background-color: #2d3436;
+  text-align: center;
+  color: #ecf0f1;
+  padding: 1%;
 }
-  
-#clock-div {
-    grid-area: clock;
-    align-self: start;
-    display: block;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  
-#clock {
-    font-size: 12em;
-    font-weight: bold;
-    margin: 0;
-    text-shadow: 4px 4px 5px #353535;
+
+h1{
+  font-size: 112px;
+  margin-top:13%;
+  margin-bottom: 0px;
 }
-  
-#login-div {
-    grid-area: name;
-    align-self: center;
-    display: block;
+
+h5{
+  font-weight: 100;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
-  
-#login-form {
-    border: none;
-    color: white;
-    font-size: 36px;
-    margin-bottom: 20px;
+
+input {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  margin: 3px;
+  text-align:center;
+  color: #ecf0f1;
+  border-bottom: 2px solid #ecf0f1;
 }
-  
-  #login-form input {
-    font-size: 32px;
-    text-shadow: 1px 1px 3px #353535;
-  }
-  
-  #greeting {
-    font-size: 40px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 3px #353535;
+
+ul {
+  margin-left: 40%;
+}
+
+li{
+  list-style: none;
+  font-size: 20px;
+  text-align:left;
+  color: #ecf0f1;
+}
+li:before{
+  content:'✅';
+  display: inline;
+  vertical-align: left;
+  padding: 5px;
+}
+
+button{
+  border: none;
+  background: transparent;
+  font-size: 22px;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing{
+  display: block;
+  transition: color .5s ease-in-out;
+  font-size: 34px;
+  margin-top: 0px;
+}
+
+img {
+  position:absolute;
+  width:100%;
+  height:100%;
+  left: 0px;
+  top: 0px;
+  right:0px;
+  bottom:0px;
+  z-index: -1;
+  opacity:80%;
   }
 
-  #todo-div {
-    grid-area: todo;
-    align-self: end;
-    display: block;
+.js-temp{
+  font-weight: 500;
+  font-size: 22px;
+  padding-left: 95%;
+}
+
+.js-place{
+  font-weight: 300;
+  font-size: 12px;
+  padding-left: 95%;
+}
+
+@keyframes fadeIn{
+  from {
+      opacity: 0;
   }
-  
-  #todo-form input {
-    padding-top: 20px;
-    font-size: 26px;
-    text-shadow: 1px 1px 3px #353535;
+  to{
+      opacity : 1;
   }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 20px;
-    display: block;
-  }
-  
-  li {
-    font-size: 22px;
-    text-shadow: 1px 1px 3px #353535;
-    padding: 3px;
-  }
-  
-  #todo_button {
-    margin-right: 10px;
-    cursor: pointer;
-    background: none;
-    appearance: none;
-    border: 0;
-  }
-  
-  #quote {
-    position: absolute;
-    bottom: 20px;
-  }
-  
-  #weather {
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    text-align: right;
-  }
-  
-  #weather_span {
-    display: block;
-  }
-  
-  #city_span {
-    display: block;
-  }
+}
