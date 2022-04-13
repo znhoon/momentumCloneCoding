@@ -10,3 +10,6 @@ Practice simple frontend-skil(JS, HTML, CSS) and to make my own chrome starting 
 
 ## Result
 ![image](https://user-images.githubusercontent.com/92897635/163110478-15a95420-9f5f-4739-84dd-83ef99c9097c.png)
+
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=znhoon&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
